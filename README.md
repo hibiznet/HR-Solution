@@ -16,3 +16,11 @@
 - admin / admin1234!
 - hrmanager / hr1234!
 - teamlead / team1234!
+
+## 브로셔
+<img width="1536" height="1024" alt="하이비즈넷-HR솔루션 제품 팜플렛" src="https://github.com/user-attachments/assets/0ea9dcca-9090-4697-ac0a-69da2ba35083" />
+
+## 화면
+<img width="1888" height="888" alt="image" src="https://github.com/user-attachments/assets/efdc8662-1d55-48a5-b74e-4eb8a2824135" />
+
+
