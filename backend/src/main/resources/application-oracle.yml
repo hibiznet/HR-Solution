@@ -1,0 +1,31 @@
+spring:
+  config:
+    activate:
+      on-profile: oracle
+
+  datasource:
+    url: jdbc:oracle:thin:@oracle-host:1521/XEPDB1
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration/oracle
+
+security:
+  jwt:
+    issuer: hibiznet-hr
+    secret: ${JWT_SECRET_BASE64}
+    access-token-expire-seconds: 3600
+    refresh-token-expire-seconds: 1209600

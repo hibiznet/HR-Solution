@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  mariadb:
+    image: mariadb:11.4
+    container_name: hibiznet-hr-mariadb
+    environment:
+      MARIADB_ROOT_PASSWORD: rootpass
+      MARIADB_DATABASE: hrdb
+      MARIADB_USER: hr_user
+      MARIADB_PASSWORD: hr_pass
+    ports:
+      - "3306:3306"
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci"]
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+  redis:
+    image: redis:7.2
+    container_name: hibiznet-hr-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  mariadb_data:
+  redis_data:

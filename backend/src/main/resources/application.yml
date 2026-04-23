@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: hibiznet-hr-backend
+  profiles:
+    active: local
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: false
+        use_sql_comments: true
+        jdbc:
+          time_zone: Asia/Seoul
+  jackson:
+    time-zone: Asia/Seoul
+    serialization:
+      write-dates-as-timestamps: false
+security:
+  jwt:
+    issuer: hibiznet-hr
+  refresh-token:
+    key-prefix: "hr:refresh:"
+
+server:
+  port: 8080
+logging:
+  level:
+    root: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+
+app:
+  security:
+    allowed-origins:
+      - http://localhost:5173
+    secure-headers: true

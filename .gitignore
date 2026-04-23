@@ -1,0 +1,23 @@
+# IDE
+.idea/
+.metadata/
+*.iml
+
+# Gradle
+.gradle/
+**/.gradle/
+build/
+**/build/
+
+# Node
+node_modules/
+**/node_modules/
+dist/
+coverage/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
